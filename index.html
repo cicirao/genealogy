@@ -1,37 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Genealogy by cicirao</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Genealogy</h1>
-      <h2 class="project-tagline">Intellectual Genealogy of Henry Jenkins. Based on D3.</h2>
-      <a href="https://github.com/cicirao/genealogy" class="btn">View on GitHub</a>
-      <a href="https://github.com/cicirao/genealogy/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/cicirao/genealogy/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-
-    <section class="main-content">
-      <p>&lt;!DOCTYPE html&gt;
-
-
-</p>Intellectual Genealogy of Henry Jenkins
-
-
-
-
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="fav.png" />
+<title>Intellectual Genealogy of Henry Jenkins</title>
+<script src="http://d3js.org/d3.v3.js"></script>
+<style>
 /* h1 */
 h1 {
-    color: #fff;
-    font-family: tisa sans pro, helvetica;
-    text-align: center;
+	color: #fff;
+	font-family: tisa sans pro, helvetica;
+	text-align: center;
 }
 
 path.link {
@@ -112,34 +89,34 @@ text {
 }
 
 body {
-    background-color: #000;
+	background-color: #000;
 }
 
 svg {
-    text-align: center;
-    display: block;
-    margin: auto;
-    width: 100%;
-    height: 64em;
-    top: 10em;
-    left: 5em;
-    position: absolute;
+	text-align: center;
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: 64em;
+	top: 10em;
+	left: 5em;
+	position: absolute;
 }
 
 li, .summary, footer {
-    color: #EEE;
-    font-family: tisa sans pro, helvetica;
-    text-align: left;
-    list-style: none;
+	color: #EEE;
+	font-family: tisa sans pro, helvetica;
+	text-align: left;
+	list-style: none;
 }
 
 .intro {
-    /*display: inline-block;*/
+	/*display: inline-block;*/
 }
 
 .summary {
-    display: inline-block;
-    background-color: #2F9B64;
+	display: inline-block;
+	background-color: #2F9B64;
   width: 100%;
   padding: 0 4em;
   color: #fff;
@@ -149,104 +126,271 @@ li, .summary, footer {
 }
 
 footer {
-    margin: 0 auto;
-    text-align: center;
-    padding: 1em;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1em;
 }
 
 h2 {
-    border-bottom: 1px solid;
-    color: #fff;
-    width: 24em;
+	border-bottom: 1px solid;
+	color: #fff;
+	width: 24em;
 }
 
 .summary p {
-    width: 36em;
+	width: 36em;
 }
 
 .nu {
-    list-style: decimal;
+	list-style: decimal;
 }
 
 ul.bu li{
-    list-style: initial;
+	list-style: initial;
 }
 
 one, two, three, four, five, six {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
   border: 1.5px solid #fff;
 }
 
 one {
-    background-color: #6dcff6;
+	background-color: #6dcff6;
 }
 
 two {
-    background-color: #FF3B77;
+	background-color: #FF3B77;
 }
 
 three {
-    background-color: #3bb878;
+	background-color: #3bb878;
 }
 
 four {
-    background-color: #CDFF00;
+	background-color: #CDFF00;
 }
 
 five {
-    background-color: #8C4646;
+	background-color: #8C4646;
 }
 
 six {
-    background-color: #F2E394;
+	background-color: #F2E394;
 }
-
-
-<p></p>
-
-<h1>
-<a id="intellectual-genealogy-of-henry-jenkins" class="anchor" href="#intellectual-genealogy-of-henry-jenkins" aria-hidden="true"><span class="octicon octicon-link"></span></a>INTELLECTUAL GENEALOGY OF <strong>HENRY JENKINS</strong>
-</h1>
-
-<div>
+</style>
+<body>
+<h1>INTELLECTUAL GENEALOGY OF <strong>HENRY JENKINS</strong></h1>
+<div class="intro">
   <ul>
-    <li> Media/Communication</li>
-    <li> Cultural Studies</li>
-    <li> Social Science/History/Anthropology</li>
-    <li> Game/Human-Computer Interaction</li>
-    <li> Literary Theory/Linguistics</li>
-    <li> Philosophy</li>
+    <li><one></one> Media/Communication</li>
+    <li><two></two> Cultural Studies</li>
+    <li><three></three> Social Science/History/Anthropology</li>
+    <li><four></four> Game/Human-Computer Interaction</li>
+    <li><five></five> Literary Theory/Linguistics</li>
+    <li><six></six> Philosophy</li>
   </ul>
 </div>
+<!-- <div class="summary">
+  This is the summary of the process. This should be 500 words.
+  Including:
+  <ul>
+    <li>
+    	1. Fields interaction. meaning the intersection of different fields.
+    </li>
+    <li>
+    	2. How knowledge inherits. This can be done after taking a look at the Hybrid Pedagogy.
+    </li>
+    <li>
+    	3. Gender difference. Most scholars in the graphic are male.
+    </li>
+    <li>
+    	4. How do i feel the process? How it helps?
+    </li>
+  </ul>
+</div> -->
+<script>
+
+// get the data
+d3.csv("force.csv", function(error, links) {
+
+var nodes = {};
+
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+    link.source = nodes[link.source] || 
+        (nodes[link.source] = {name: link.source});
+    link.target = nodes[link.target] || 
+        (nodes[link.target] = {name: link.target});
+    link.value = +link.value;
+});
+
+var width = 1024,
+    height = 1024;
+
+var force = d3.layout.force()
+    .nodes(d3.values(nodes))
+    .links(links)
+    .size([width, height])
+    .linkDistance(120)
+    .charge(-300)
+    .on("tick", tick)
+    .start();
+
+// Set the range
+var  v = d3.scale.linear().range([0, 100]);
+
+// Scale the range of the data
+v.domain([0, d3.max(links, function(d) { return d.value; })]);
+
+// asign a type per value to encode opacity
+links.forEach(function(link) {
+	if (v(link.value) <= 25) {
+		link.type = "twofive";
+	} else if (v(link.value) <= 50 && v(link.value) > 25) {
+		link.type = "fivezero";
+	} else if (v(link.value) <= 75 && v(link.value) > 50) {
+		link.type = "sevenfive";
+	} else if (v(link.value) <= 100 && v(link.value) > 75) {
+		link.type = "onezerozero";
+	}
+});
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+// build the arrow.
+svg.append("svg:defs").selectAll("marker")
+    .data(["end"])      // Different link/path types can be defined here
+  .enter().append("svg:marker")    // This section adds in the arrows
+    .attr("id", String)
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 28)
+    .attr("refY", -1.5)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+    .attr("fill", "#6dcff6")
+  .append("svg:path")
+    .attr("d", "M0,-5L10,0L0,5");
+
+// add the links and the arrows
+var path = svg.append("svg:g").selectAll("path")
+    .data(force.links())
+  .enter().append("svg:path")
+    .attr("class", function(d) { return "link " + d.type; })
+    .attr("marker-end", "url(#end)");
+
+// define the nodes
+var node = svg.selectAll(".node")
+    .data(force.nodes())
+  .enter().append("g")
+    .attr("class", "node")
+    .on("click", click)
+    .on("dblclick", dblclick)
+    .call(force.drag);
 
 
+// add the nodes
+node.append("circle")
+		// .attr("class", field)
+    .attr("r", 10);
 
+// add the text 
+node.append("text")
+    .attr("x", "-3em")
+    .attr("dy", "3.35em")
+    .attr("z-index", "-999")
+    .text(function(d) { return d.name; });
 
+// add color
+d3.csv("names.csv", function(error, names) {
+	var nodes = document.getElementsByClassName('node');
 
-<div>
-<h2>
-<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2>
+	for (var i=0, iLen=nodes.length; i<iLen; i++) {
+		n = nodes[i].lastChild.innerHTML;
+		c = nodes[i].firstChild;
+    names.forEach(function(names) {
+    	console.log(names.name);
+    	if (n == names.name) {
+    		console.log(names.field);
+    		c.setAttribute("class", names.field);
+    	}
+    });
+  }
+});
+
+// add the curvy lines
+function tick() {
+    path.attr("d", function(d) {
+        var dx = d.target.x - d.source.x,
+            dy = d.target.y - d.source.y,
+            dr = Math.sqrt(dx * dx + dy * dy);
+        return "M" + 
+            d.source.x + "," + 
+            d.source.y + "A" + 
+            dr + "," + dr + " 0 0,1 " + 
+            d.target.x + "," + 
+            d.target.y;
+    });
+
+    node
+        .attr("transform", function(d) { 
+		    return "translate(" + d.x + "," + d.y + ")"; });
+}
+
+// action to take on mouse click
+function click() {
+    d3.select(this).select("text").transition()
+        .duration(750)
+        .attr("y", -28)
+        // .style("fill", "steelblue")
+        // .style("stroke", "lightsteelblue")
+        .style("stroke-width", ".5px")
+        .style("font", "20px sans-serif");
+    d3.select(this).select("circle").transition()
+        .duration(750)
+        .attr("r", 16)
+        // .style("fill", "lightsteelblue");
+}
+
+// action to take on mouse double click
+function dblclick() {
+    d3.select(this).select("circle").transition()
+        .duration(750)
+        .attr("r", 10)
+        // .style("fill", "#ccc");
+    d3.select(this).select("text").transition()
+        .duration(750)
+        .attr("y", -1.5)
+        // .style("stroke", "none")
+        // .style("fill", "black")
+        // .style("stroke", "none")
+        .style("font", "6px sans-serif");
+}
+
+});
+
+</script>
+<div class="summary">
+<h2>About</h2>
 <p>This intellectual genealogy aims at giving a general view of the academic influence of Henry Jenkins. I consider the scholars’ individual training—their dissertation advisor, collaborations—people they work with, as well as their publication record—who they cite. </p>
 <p>Different color represents different research fields (see the left side).<br>
 The direction of arrow represents the origin of the knowledge. <br>
 Collaboration relationship are linked in light blue, advising and citing relationships are linked in blue.<br>Try click the node to make it larger, and double-click to back to small.</p>
 <p>
 If the visualization is not represented very well, try refresh the page.
-</p>
 <p>
-</p>
-<h2>
-<a id="henry-jenkins" class="anchor" href="#henry-jenkins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Henry Jenkins</h2>
+<h2>Henry Jenkins</h2>
 <p>
 Henry Jenkins III is an American media scholar and currently a Provost Professor of Communication, Journalism, and Cinematic Arts, a joint professorship at the USC Annenberg School for Communication and the USC School of Cinematic Arts.
 </p>
 <p>
 He is also author of several books, including <i>Convergence Culture: Where Old and New Media Collide</i>, <i>Textual Poachers: Television Fans and Participatory Culture</i> and <i>What Made Pistachio Nuts?: Early Sound Comedy and the Vaudeville Aesthetic</i>.
 </p>
-<h2>
-<a id="summary-of-process" class="anchor" href="#summary-of-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary of Process</h2>
+<h2>Summary of Process</h2>
 <p>All data comes from Google, Google Scholar, IIT lab database, and ProQuest.
 </p>
 <p><strong>Individual Training:</strong> I use ProQuest to trace the academic study of a scholar, to find their dissertations and their advisors.
@@ -255,54 +399,36 @@ He is also author of several books, including <i>Convergence Culture: Where Old 
 </p>
 <p><strong>Publication Record</strong>: This part needs some close reading of the scholar’s work and it’s very subjective. Meanwhile, I also check the bibliography and evaluate the influence of a scholar by the number of his/her cited work. For example, three books of Roland Barthes have been cited by John Fiske, then I think that the knowledge is inherited from Barthes to Fiske.
 </p>
-<h2>
-<a id="interesting-findings" class="anchor" href="#interesting-findings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interesting Findings</h2>
+<h2>Interesting Findings</h2>
 <ul>
-<li>
-    <h3>
-<a id="fields-interaction-meaning-the-intersection-of-different-fields" class="anchor" href="#fields-interaction-meaning-the-intersection-of-different-fields" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fields interaction. Meaning the intersection of different fields.</h3>
-  <ul>
+<li class="nu">
+	<h3>Fields interaction. Meaning the intersection of different fields.</h3>
+  <ul class="bu">
     <li>Inside one field, the network is very tight.</li>
     <li>Few people work across their field.</li>
     <li>Henry Jenkins works across various field.</li>
   </ul>
 </li>
-<li>
-    <h3>
-<a id="how-knowledge-inherits" class="anchor" href="#how-knowledge-inherits" aria-hidden="true"><span class="octicon octicon-link"></span></a>How knowledge inherits.</h3>
-  <ul>
+<li class="nu">
+	<h3>How knowledge inherits.</h3>
+  <ul class="bu">
     <li>Students do not have to be in the same field with their advisors.</li>
     <li>The original fields are literary and philosophy.</li>
     <li>Computer and media connect closer as knowledge inherits.</li>
     <li>Scholars collaborate more as knowledge inherits.</li>
   </ul>
 </li>
-<li>
-    <h3>
-<a id="gender-difference" class="anchor" href="#gender-difference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gender difference.</h3>
-  <ul>
+<li class="nu">
+	<h3>Gender difference.</h3>
+  <ul class="bu">
     <li>Most scholars in the network are male.</li>
   </ul>
 </li>
 </ul>
 
- Copyright by Xi Rao. 
-See the code on my <a href="https://github.com/cicirao/genealogy">GitHub</a>. 
+<footer>Copyright by Xi Rao. 
+See the code on my <a href="https://github.com/cicirao/genealogy">GitHub</a>.</footer>
 </div>
+</body>
 
-<p></p>
-
-<p></p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/cicirao/genealogy">Genealogy</a> is maintained by <a href="https://github.com/cicirao">cicirao</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
 </html>
-
