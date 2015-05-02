@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Genealogy by cicirao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Genealogy</h1>
+      <h2 class="project-tagline">Intellectual Genealogy of Henry Jenkins. Based on D3.</h2>
+      <a href="https://github.com/cicirao/genealogy" class="btn">View on GitHub</a>
+      <a href="https://github.com/cicirao/genealogy/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/cicirao/genealogy/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>&lt;!DOCTYPE html&gt;
+
+
+</p>Intellectual Genealogy of Henry Jenkins
+
+
+
+
+/* h1 */
+h1 {
+    color: #fff;
+    font-family: tisa sans pro, helvetica;
+    text-align: center;
+}
+
+path.link {
+  fill: none;
+  stroke: #6dcff6;
+  stroke-width: 1px;
+}
+
+path.link.twofive {
+  opacity: 0.25;
+}
+
+path.link.fivezero {
+  opacity: 0.25;
+}
+
+path.link.sevenfive {
+  opacity: 0.75;
+}
+
+path.link.onezerozero {
+  opacity: 1.0;
+}
+
+circle.zero {
+  fill: #6dcff6;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Media/Communication */
+circle.one {
+  fill: #6dcff6;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Cultural Studies */
+circle.two {
+  fill: #FF3B77;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Social Science, History, Anthropology */
+circle.three {
+  fill: #3bb878;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Game, Human-Computer Interaction  */
+circle.four {
+  fill: #CDFF00;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Literary Theory, linguistics */
+circle.five {
+  fill: #8C4646;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Philosophy */
+circle.six {
+  fill: #F2E394;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  fill: #999;
+  font: 6px sans-serif;
+  pointer-events: none;
+  z-index: -999;
+}
+
+body {
+    background-color: #000;
+}
+
+svg {
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 64em;
+    top: 10em;
+    left: 5em;
+    position: absolute;
+}
+
+li, .summary, footer {
+    color: #EEE;
+    font-family: tisa sans pro, helvetica;
+    text-align: left;
+    list-style: none;
+}
+
+.intro {
+    /*display: inline-block;*/
+}
+
+.summary {
+    display: inline-block;
+    background-color: #2F9B64;
+  width: 100%;
+  padding: 0 4em;
+  color: #fff;
+  float: left;
+  top: 74em;
+  position: absolute;
+}
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+}
+
+h2 {
+    border-bottom: 1px solid;
+    color: #fff;
+    width: 24em;
+}
+
+.summary p {
+    width: 36em;
+}
+
+.nu {
+    list-style: decimal;
+}
+
+ul.bu li{
+    list-style: initial;
+}
+
+one, two, three, four, five, six {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  border: 1.5px solid #fff;
+}
+
+one {
+    background-color: #6dcff6;
+}
+
+two {
+    background-color: #FF3B77;
+}
+
+three {
+    background-color: #3bb878;
+}
+
+four {
+    background-color: #CDFF00;
+}
+
+five {
+    background-color: #8C4646;
+}
+
+six {
+    background-color: #F2E394;
+}
+
+
+<p></p>
+
+<h1>
+<a id="intellectual-genealogy-of-henry-jenkins" class="anchor" href="#intellectual-genealogy-of-henry-jenkins" aria-hidden="true"><span class="octicon octicon-link"></span></a>INTELLECTUAL GENEALOGY OF <strong>HENRY JENKINS</strong>
+</h1>
+
+<div>
+  <ul>
+    <li> Media/Communication</li>
+    <li> Cultural Studies</li>
+    <li> Social Science/History/Anthropology</li>
+    <li> Game/Human-Computer Interaction</li>
+    <li> Literary Theory/Linguistics</li>
+    <li> Philosophy</li>
+  </ul>
+</div>
+
+
+
+
+
+<div>
+<h2>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2>
+<p>This intellectual genealogy aims at giving a general view of the academic influence of Henry Jenkins. I consider the scholars’ individual training—their dissertation advisor, collaborations—people they work with, as well as their publication record—who they cite. </p>
+<p>Different color represents different research fields (see the left side).<br>
+The direction of arrow represents the origin of the knowledge. <br>
+Collaboration relationship are linked in light blue, advising and citing relationships are linked in blue.<br>Try click the node to make it larger, and double-click to back to small.</p>
+<p>
+If the visualization is not represented very well, try refresh the page.
+</p>
+<p>
+</p>
+<h2>
+<a id="henry-jenkins" class="anchor" href="#henry-jenkins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Henry Jenkins</h2>
+<p>
+Henry Jenkins III is an American media scholar and currently a Provost Professor of Communication, Journalism, and Cinematic Arts, a joint professorship at the USC Annenberg School for Communication and the USC School of Cinematic Arts.
+</p>
+<p>
+He is also author of several books, including <i>Convergence Culture: Where Old and New Media Collide</i>, <i>Textual Poachers: Television Fans and Participatory Culture</i> and <i>What Made Pistachio Nuts?: Early Sound Comedy and the Vaudeville Aesthetic</i>.
+</p>
+<h2>
+<a id="summary-of-process" class="anchor" href="#summary-of-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary of Process</h2>
+<p>All data comes from Google, Google Scholar, IIT lab database, and ProQuest.
+</p>
+<p><strong>Individual Training:</strong> I use ProQuest to trace the academic study of a scholar, to find their dissertations and their advisors.
+</p>
+<p><strong>Collaborations</strong>: I search the scholars’ names in Google Scholar, and look for the entries that they work with others. However, some scholars have worked with so many people, for example, Henry Jenkins. I mostly take the entries that have been cited over 100 times because this number can reflect the influence of the collaboration to some extent.
+</p>
+<p><strong>Publication Record</strong>: This part needs some close reading of the scholar’s work and it’s very subjective. Meanwhile, I also check the bibliography and evaluate the influence of a scholar by the number of his/her cited work. For example, three books of Roland Barthes have been cited by John Fiske, then I think that the knowledge is inherited from Barthes to Fiske.
+</p>
+<h2>
+<a id="interesting-findings" class="anchor" href="#interesting-findings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interesting Findings</h2>
+<ul>
+<li>
+    <h3>
+<a id="fields-interaction-meaning-the-intersection-of-different-fields" class="anchor" href="#fields-interaction-meaning-the-intersection-of-different-fields" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fields interaction. Meaning the intersection of different fields.</h3>
+  <ul>
+    <li>Inside one field, the network is very tight.</li>
+    <li>Few people work across their field.</li>
+    <li>Henry Jenkins works across various field.</li>
+  </ul>
+</li>
+<li>
+    <h3>
+<a id="how-knowledge-inherits" class="anchor" href="#how-knowledge-inherits" aria-hidden="true"><span class="octicon octicon-link"></span></a>How knowledge inherits.</h3>
+  <ul>
+    <li>Students do not have to be in the same field with their advisors.</li>
+    <li>The original fields are literary and philosophy.</li>
+    <li>Computer and media connect closer as knowledge inherits.</li>
+    <li>Scholars collaborate more as knowledge inherits.</li>
+  </ul>
+</li>
+<li>
+    <h3>
+<a id="gender-difference" class="anchor" href="#gender-difference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gender difference.</h3>
+  <ul>
+    <li>Most scholars in the network are male.</li>
+  </ul>
+</li>
+</ul>
+
+ Copyright by Xi Rao. 
+See the code on my <a href="https://github.com/cicirao/genealogy">GitHub</a>. 
+</div>
+
+<p></p>
+
+<p></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/cicirao/genealogy">Genealogy</a> is maintained by <a href="https://github.com/cicirao">cicirao</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
