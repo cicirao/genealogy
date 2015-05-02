@@ -300,7 +300,7 @@ var node = svg.selectAll(".node")
 
 // add the nodes
 node.append("circle")
-		// .attr("class", field)
+		.attr("class", "one")
     .attr("r", 10);
 
 // add the text 
@@ -312,8 +312,22 @@ node.append("text")
 
 // add color
 d3.csv("names.csv", function(error, names) {
-	var nodes = document.getElementsByClassName('node');
-
+  // var texts = document.getElementsByTagName("text");
+  // for (var i=0, iLen=texts.lenth; i<iLen; i++) {
+  //   var t = texts[i].innerHTML; 
+    var nodes = document.getElementsByClassName("node");
+  //   names.forEach(function(names) {
+  //     if (t == names.name) {
+  //       var field = names.field;
+  //       console.log(field);
+  //       // add the nodes
+  //       circle = document.createElement('circle');
+  //       nodes[i].appendChild(circle);
+  //           // .setAttribute("class", field)
+  //           // .setAttribute("r", 10);
+  //       }
+  //     });
+  // }
 	for (var i=0, iLen=nodes.length; i<iLen; i++) {
 		n = nodes[i].lastChild.innerHTML;
 		c = nodes[i].firstChild;
@@ -323,7 +337,9 @@ d3.csv("names.csv", function(error, names) {
     		console.log(names.field);
     		c.setAttribute("class", names.field);
         // c.className = names.field;
-    	}
+    	} else {
+        console.log("else");
+      };
     });
   }
 });
