@@ -1,14 +1,14 @@
-source,target,value,field1,field2
-Henry Jenkins,David Bordwell,1,0,
-Henry Jenkins,John Fiske,1,0,
-Henry Jenkins,Janice Radway,1,0,
-Henry Jenkins,John Tulloch,1,0,
-Henry Jenkins,Camille Bacon-Smith,1,0,
-Henry Jenkins,Michel de Certeau,1,0,
-Henry Jenkins,E. P. Thompson,1,0,
-Henry Jenkins,Pierre Levy,1,0,
-Henry Jenkins,Ien Ang,1,0,
-Henry Jenkins,David Morley,1,0,
+source,target,value,
+Henry Jenkins,David Bordwell,1
+Henry Jenkins,John Fiske,1
+Henry Jenkins,Janice Radway,1
+Henry Jenkins,John Tulloch,1
+Henry Jenkins,Camille Bacon-Smith,1
+Henry Jenkins,Michel de Certeau,1
+Henry Jenkins,E. P. Thompson,1
+Henry Jenkins,Pierre Levy,1
+Henry Jenkins,Ien Ang,1
+Henry Jenkins,David Morley,1
 Alice O'Driscoll,Henry Jenkins,0.5
 Cynthia Jenkins,Henry Jenkins,0.5
 John Tulloch,Henry Jenkins,0.5
@@ -50,23 +50,17 @@ Kevin Gaines,Janice Radway,0.5
 Barry Shank,Janice Radway,0.5
 Penny Von Eschen,Janice Radway,0.5
 Deborah Lupton,John Tulloch,0.5
-Camille Bacon-Smith,,1
-Michel de Certeau, ,1
-Jeremy Aheame,Michel de Certeau,0.5
+Jeremy Ahearne,Michel de Certeau,0.5
 Luce Giard,Michel de Certeau,0.5
 Fredric Jameson,Michel de Certeau,0.5
-Carl Lovitt,Michel de Certeau,0.5
-James Hovde,Michel de Certeau,0.5
 E. P. Thompson,Karl Marx,1
 Douglas Hay,E. P. Thompson,0.5
-Peter Linebaugh,,E. P. Thompson,0.5
-John G. Rule,,E. P. Thompson,0.5
-Cal Winslow,,E. P. Thompson,0.5
+Peter Linebaugh,E. P. Thompson,0.5
+John G. Rule,E. P. Thompson,0.5
+Cal Winslow,E. P. Thompson,0.5
 Carlos Irineu da Costa,Pierre Levy,0.5
 Jon Stratton,Ien Ang,0.5
 Jeffrey E. Brand,Ien Ang,0.5
-Greg Noble,Ien Ang,0.5
-Derek Wilding,Ien Ang,0.5
 Kevin Robins,David Morley,0.5
 Roger Silverstone,David Morley,0.5
 Kuan-Hsing Chen,David Morley,0.5
@@ -75,14 +69,13 @@ Jo Bardoel,Mark Deuze,0.5
 Axel Bruns,Mark Deuze,0.5
 Christoph Neuberger,Mark Deuze,0.5
 Howard Eiland,David Thorburn,0.5
-Eric Klopfer,Tony Ives,1
 Kurt Squire,Eric Klopfer,0.5
 Susan Yoon,Eric Klopfer,0.5
 Vanessa Stevens Colella,Eric Klopfer,0.5
 Mitchel Resnick,Eric Klopfer,0.5
 Justine Cassell,David McNeill,1
 David McNeill,Leo Postman,1
-Hannes Högni Vilhjálmsson,Justine Cassell,0.5
+Hannes Hogni Vilhjalmsson,Justine Cassell,0.5
 Timothy Bickmore,Justine Cassell,0.5
 Kristinn R. Thorisson,Justine Cassell,0.5
 Timothy Bickmore,Justine Cassell,0.5
@@ -109,12 +102,12 @@ Raymond Williams,Eric Hobsbawm,1
 Raymond Williams,Pierre Bourdieu,1
 Michael Orrom,Raymond Williams,0.5
 E. P. Thompson,Raymond Williams,0.5
-Roland Barthes,Honoré de Balzac,1
+Roland Barthes,Honore de Balzac,1
 Lionel Duisit,Roland Barthes,0.5
 Susan Sontag,Roland Barthes,0.5
 Ondina Fachel Leal,Pierre Bourdieu,1
 Ondina Fachel Leal,Michel de Certeau,1
-Ondina Fachel Leal,Claude Lévi-Strauss,1
+Ondina Fachel Leal,Claude Levi-Strauss,1
 Ondina Fachel Leal,Ruben Oliven,1
 Pierre Bourdieu,Karl Marx,1
 Pierre Bourdieu,Max Weber,1

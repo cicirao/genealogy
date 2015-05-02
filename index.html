@@ -4,6 +4,12 @@
 <title>Intellectual Genealogy of Henry Jenkins</title>
 <script src="http://d3js.org/d3.v3.js"></script>
 <style>
+/* h1 */
+h1 {
+	color: #fff;
+	font-family: tisa sans pro, helvetica;
+	text-align: center;
+}
 
 path.link {
   fill: none;
@@ -16,7 +22,7 @@ path.link.twofive {
 }
 
 path.link.fivezero {
-  opacity: 0.50;
+  opacity: 0.25;
 }
 
 path.link.sevenfive {
@@ -27,8 +33,50 @@ path.link.onezerozero {
   opacity: 1.0;
 }
 
-circle {
+circle.zero {
   fill: #6dcff6;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Media/Communication */
+circle.one {
+  fill: #6dcff6;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Cultural Studies */
+circle.two {
+  fill: #FF3B77;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Social Science, History, Anthropology */
+circle.three {
+  fill: #3bb878;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Game, Human-Computer Interaction  */
+circle.four {
+  fill: #CDFF00;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Literary Theory, linguistics */
+circle.five {
+  fill: #8C4646;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* Philosophy */
+circle.six {
+  fill: #F2E394;
   stroke: #fff;
   stroke-width: 1.5px;
 }
@@ -44,8 +92,124 @@ body {
 	background-color: #000;
 }
 
+svg {
+	text-align: center;
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: 64em;
+	top: 10em;
+	left: 5em;
+	position: absolute;
+}
+
+li, .summary, footer {
+	color: #EEE;
+	font-family: tisa sans pro, helvetica;
+	text-align: left;
+	list-style: none;
+}
+
+.intro {
+	/*display: inline-block;*/
+}
+
+.summary {
+	display: inline-block;
+	background-color: #2F9B64;
+  width: 100%;
+  padding: 0 4em;
+  color: #fff;
+  float: left;
+  top: 74em;
+  position: absolute;
+}
+
+footer {
+	margin: 0 auto;
+	text-align: center;
+	padding: 1em;
+}
+
+h2 {
+	border-bottom: 1px solid;
+	color: #fff;
+	width: 24em;
+}
+
+.summary p {
+	width: 36em;
+}
+
+.nu {
+	list-style: decimal;
+}
+
+ul.bu li{
+	list-style: initial;
+}
+
+one, two, three, four, five, six {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+  border: 1.5px solid #fff;
+}
+
+one {
+	background-color: #6dcff6;
+}
+
+two {
+	background-color: #FF3B77;
+}
+
+three {
+	background-color: #3bb878;
+}
+
+four {
+	background-color: #CDFF00;
+}
+
+five {
+	background-color: #8C4646;
+}
+
+six {
+	background-color: #F2E394;
+}
 </style>
 <body>
+<h1>INTELLECTUAL GENEALOGY OF <strong>HENRY JENKINS</strong></h1>
+<div class="intro">
+  <ul>
+    <li><one></one> Media/Communication</li>
+    <li><two></two> Cultural Studies</li>
+    <li><three></three> Social Science/History/Anthropology</li>
+    <li><four></four> Game/Human-Computer Interaction</li>
+    <li><five></five> Literary Theory/Linguistics</li>
+    <li><six></six> Philosophy</li>
+  </ul>
+</div>
+<!-- <div class="summary">
+  This is the summary of the process. This should be 500 words.
+  Including:
+  <ul>
+    <li>
+    	1. Fields interaction. meaning the intersection of different fields.
+    </li>
+    <li>
+    	2. How knowledge inherits. This can be done after taking a look at the Hybrid Pedagogy.
+    </li>
+    <li>
+    	3. Gender difference. Most scholars in the graphic are male.
+    </li>
+    <li>
+    	4. How do i feel the process? How it helps?
+    </li>
+  </ul>
+</div> -->
 <script>
 
 // get the data
@@ -62,8 +226,8 @@ links.forEach(function(link) {
     link.value = +link.value;
 });
 
-var width = 960,
-    height = 1760;
+var width = 1024,
+    height = 1024;
 
 var force = d3.layout.force()
     .nodes(d3.values(nodes))
@@ -128,8 +292,10 @@ var node = svg.selectAll(".node")
     .on("dblclick", dblclick)
     .call(force.drag);
 
+
 // add the nodes
 node.append("circle")
+		// .attr("class", field)
     .attr("r", 10);
 
 // add the text 
@@ -138,6 +304,23 @@ node.append("text")
     .attr("dy", "3.35em")
     .attr("z-index", "-999")
     .text(function(d) { return d.name; });
+
+// add color
+d3.csv("names.csv", function(error, names) {
+	var nodes = document.getElementsByClassName('node');
+
+	for (var i=0, iLen=nodes.length; i<iLen; i++) {
+		n = nodes[i].lastChild.innerHTML;
+		c = nodes[i].firstChild;
+    names.forEach(function(names) {
+    	console.log(names.name);
+    	if (n == names.name) {
+    		console.log(names.field);
+    		c.setAttribute("class", names.field);
+    	}
+    });
+  }
+});
 
 // add the curvy lines
 function tick() {
@@ -162,34 +345,90 @@ function tick() {
 function click() {
     d3.select(this).select("text").transition()
         .duration(750)
-        .attr("x", 22)
-        .style("fill", "steelblue")
-        .style("stroke", "lightsteelblue")
+        .attr("y", -28)
+        // .style("fill", "steelblue")
+        // .style("stroke", "lightsteelblue")
         .style("stroke-width", ".5px")
         .style("font", "20px sans-serif");
     d3.select(this).select("circle").transition()
         .duration(750)
         .attr("r", 16)
-        .style("fill", "lightsteelblue");
+        // .style("fill", "lightsteelblue");
 }
 
 // action to take on mouse double click
 function dblclick() {
     d3.select(this).select("circle").transition()
         .duration(750)
-        .attr("r", 6)
-        .style("fill", "#ccc");
+        .attr("r", 10)
+        // .style("fill", "#ccc");
     d3.select(this).select("text").transition()
         .duration(750)
-        .attr("x", 12)
-        .style("stroke", "none")
-        .style("fill", "black")
-        .style("stroke", "none")
-        .style("font", "10px sans-serif");
+        .attr("y", -1.5)
+        // .style("stroke", "none")
+        // .style("fill", "black")
+        // .style("stroke", "none")
+        .style("font", "6px sans-serif");
 }
 
 });
 
 </script>
+<div class="summary">
+<h2>About</h2>
+<p>This intellectual genealogy aims at giving a general view of the academic influence of Henry Jenkins. I consider the scholars’ individual training—their dissertation advisor, collaborations—people they work with, as well as their publication record—who they cite. </p>
+<p>Different color represents different research fields (see the left side).<br>
+The direction of arrow represents the origin of the knowledge. <br>
+Collaboration relationship are linked in light blue, advising and citing relationships are linked in blue.<br>Try click the node to make it larger, and double-click to back to small.</p>
+<p>
+If the visualization is not represented very well, try refresh the page.
+<p>
+<h2>Henry Jenkins</h2>
+<p>
+Henry Jenkins III is an American media scholar and currently a Provost Professor of Communication, Journalism, and Cinematic Arts, a joint professorship at the USC Annenberg School for Communication and the USC School of Cinematic Arts.
+</p>
+<p>
+He is also author of several books, including <i>Convergence Culture: Where Old and New Media Collide</i>, <i>Textual Poachers: Television Fans and Participatory Culture</i> and <i>What Made Pistachio Nuts?: Early Sound Comedy and the Vaudeville Aesthetic</i>.
+</p>
+<h2>Summary of Process</h2>
+<p>All data comes from Google, Google Scholar, IIT lab database, and ProQuest.
+</p>
+<p><strong>Individual Training:</strong> I use ProQuest to trace the academic study of a scholar, to find their dissertations and their advisors.
+</p>
+<p><strong>Collaborations</strong>: I search the scholars’ names in Google Scholar, and look for the entries that they work with others. However, some scholars have worked with so many people, for example, Henry Jenkins. I mostly take the entries that have been cited over 100 times because this number can reflect the influence of the collaboration to some extent.
+</p>
+<p><strong>Publication Record</strong>: This part needs some close reading of the scholar’s work and it’s very subjective. Meanwhile, I also check the bibliography and evaluate the influence of a scholar by the number of his/her cited work. For example, three books of Roland Barthes have been cited by John Fiske, then I think that the knowledge is inherited from Barthes to Fiske.
+</p>
+<h2>Interesting Findings</h2>
+<ul>
+<li class="nu">
+	<h3>Fields interaction. Meaning the intersection of different fields.</h3>
+  <ul class="bu">
+    <li>Inside one field, the network is very tight.</li>
+    <li>Few people work across their field.</li>
+    <li>Henry Jenkins works across various field.</li>
+  </ul>
+</li>
+<li class="nu">
+	<h3>How knowledge inherits.</h3>
+  <ul class="bu">
+    <li>Students do not have to be in the same field with their advisors.</li>
+    <li>The original fields are literary and philosophy.</li>
+    <li>Computer and media connect closer as knowledge inherits.</li>
+    <li>Scholars collaborate more as knowledge inherits.</li>
+  </ul>
+</li>
+<li class="nu">
+	<h3>Gender difference.</h3>
+  <ul class="bu">
+    <li>Most scholars in the network are male.</li>
+  </ul>
+</li>
+</ul>
+
+<footer>Copyright by Xi Rao. 
+See the code on my <a href="https://github.com/cicirao/genealogy">GitHub</a>.</footer>
+</div>
 </body>
+
 </html>
