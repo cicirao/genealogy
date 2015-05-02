@@ -191,8 +191,9 @@ six {
     <li><five></five> Literary Theory/Linguistics</li>
     <li><six></six> Philosophy</li>
     <br>
-    <li>Try click the node to make it larger,</li> 
+    <li>Click the node to make it larger,</li> 
     <li>and double-click to back to small.</li>
+    <li>Drag the node for fun.</li>
   </ul>
 </div>
 <!-- <div class="summary">
@@ -320,6 +321,7 @@ d3.csv("names.csv", function(error, names) {
     	if (n == names.name) {
     		console.log(names.field);
     		c.setAttribute("class", names.field);
+        // c.className = names.field;
     	}
     });
   }
