@@ -329,7 +329,7 @@ d3.csv("names.csv", function(error, names) {
   //     });
   // }
 	for (var i=0, iLen=nodes.length; i<iLen; i++) {
-		n = nodes[i].lastChild.innerHTML;
+		n = nodes[i].lastChild.textContent;
 		c = nodes[i].firstChild;
     names.forEach(function(names) {
     	console.log(names.name);
